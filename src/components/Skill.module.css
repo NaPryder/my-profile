@@ -1,0 +1,77 @@
+.imageSlider {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.imageFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: movingLogo 3s linear infinite;
+}
+.image {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  object-position: center;
+  transition: 0.3s;
+}
+
+.image:hover {
+  width: 100%;
+  height: 100%;
+  animation: bounceLogo 1s ease-in-out infinite;
+}
+
+@keyframes movingLogo {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceLogo {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  25% {
+    width: 70%;
+    height: 70%;
+    transform: rotate(90deg);
+  }
+  50% {
+    width: 90%;
+    height: 90%;
+    transform: rotate(180deg);
+  }
+  75% {
+    width: 80%;
+    height: 80%;
+    transform: rotate(270deg);
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    transform: rotate(360deg);
+  }
+}

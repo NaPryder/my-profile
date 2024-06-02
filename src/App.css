@@ -1,0 +1,44 @@
+header {
+  /* width: 100%; */
+  background-color: transparent;
+  /* max-width: 1140px; */
+  padding: 0 20px;
+  margin: 0 10%;
+  box-sizing: border-box;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  position: sticky;
+  background-color: red;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+  /* background-color: var(--color-2); */
+  opacity: 30px;
+  color: var(--font-color-1);
+  align-items: center;
+}
+
+section {
+  padding: 20px;
+  margin: 200px 10%;
+  transition: linear 1s;
+}
+section:nth-child(2n + 1) {
+  margin-top: 350px;
+}
+
+section.show-animate {
+  transition: linear 1s;
+}
+
+section > .title {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* .contact-info > .location {
+  pointer-events: none;
+} */

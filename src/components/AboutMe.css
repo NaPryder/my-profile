@@ -1,0 +1,71 @@
+/*  Section About Me */
+#about-me {
+  display: flex;
+  flex-direction: column;
+  filter: blur(30px);
+  opacity: 0;
+  transform: translateX(-100%);
+
+  /* background-color: pink; */
+}
+#about-me > h1 {
+  font-size: 4em;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 8px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+#about-me > h3 {
+  font-size: 2em;
+  margin: 25px 0;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+#about-me.show-animate {
+  transform: translateX(0%);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.role-wavy {
+  margin-top: 30px;
+  position: relative;
+  -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+.role-wavy > span {
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 4px;
+  letter-spacing: 1px;
+
+  animation: waveText 3.5s ease-in-out infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes waveText {
+  0% {
+    transform: translateY(0px);
+    margin-right: 4px;
+  }
+  20% {
+    transform: translateY(-25px);
+    margin-left: 5px;
+    margin-right: 6px;
+  }
+
+  40%,
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.profile {
+  margin: 40px 0;
+}

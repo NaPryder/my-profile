@@ -1,0 +1,50 @@
+/* Section Contact */
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  transform: translateX(100%);
+  filter: blur(30px);
+  opacity: 0;
+  transition: linear 1s;
+}
+#contact.show-animate {
+  transform: translateX(0);
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.contact-info {
+  filter: blur(20px);
+  opacity: 0;
+  transform: translateX(-100px);
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-info.animate {
+  animation: fadeInContact 0.3s 0.5s linear 1 forwards;
+  animation-delay: calc(0.1s + 0.1s * var(--i));
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.contact-info > a {
+  letter-spacing: 2px;
+  transition: 0.4s;
+}
+.contact-info > a:hover {
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 11px #747474;
+}
+
+@keyframes fadeInContact {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transform: translateX(0);
+  }
+}
